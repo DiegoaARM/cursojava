@@ -17,7 +17,19 @@ public class UsuarioController {
     private UsuarioDao usuarioDao;
 
 
-    @RequestMapping(value = "usuarios")
+    @RequestMapping("api/usuario/{id}")
+    public Usuario getUsuario(@PathVariable Long id) {
+        Usuario usuario = new Usuario();
+        usuario.setId(id);
+        usuario.setNombre("ola");
+        usuario.setApellido("ola");
+        usuario.setEmail("ola");
+        usuario.setTelefono("ola");
+        usuario.setPassword("123");
+    return usuario;
+    }
+
+    @RequestMapping("api/usuarios")
     public List<Usuario> getUsuarios() {
         return usuarioDao.getUsuarios();
     }

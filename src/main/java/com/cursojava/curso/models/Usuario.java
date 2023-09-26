@@ -18,7 +18,7 @@ public class Usuario {
     @Getter @Setter @Column(name = "id")
     private Long id;
 
-    @Getter @Setter @Column(name = "name")
+    @Getter @Setter @Column(name = "nombre")
     private String nombre;
 
     @Getter @Setter @Column(name = "apellido")
